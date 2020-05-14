@@ -41,24 +41,30 @@
 <br>
         <div class="container">
         <h2 align="center"> Update Data </h2>
-        @foreach($biodata as $a)
-        <form action="bio/tambah" method="POST">
+        <a href="/login" class="btn btn-outline-danger"> Kembali </a>
+        <br>
+        <br>
+        @foreach($bio as $a)
+        <form action="/bio/edit" method="POST">
         {{ csrf_field() }}
         <div class="input-group mb-3">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1" >Nama</span>
-  <input type="hidden" class="form-control" name="id_data" value="{{ $a->id_data }}">
-  <input type="hidden" class="form-control" name="img" value="{{ $a->img }}">
-  <input type="text" class="form-control" placeholder="Isikan nama disini" name="nama">
-</div>
-<div class="input-group mb-3">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1">Biiioo</span>
-  </div>
-  <input type="text" class="form-control" placeholder="Isikan Biodata disini" name="biodata">
-</div>
-<button type="submit" class="btn btn-outline-success"> Kirim </button>
+              <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1" >Nama</span>
+                      <input type="hidden" class="form-control" name="id_data" value="{{ $a->id_data }}">
+                      <input type="hidden" class="form-control" name="img" value="{{ $a->img }}">
+                      <input type="text" class="form-control" name="nama" value="{{ $a->nama }}">
+              </div>
+        <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Biiioo</span>
+              </div>
+                      <input type="text" class="form-control" name="biodata" value="{{ $a->biodata }}" Required>
+        </div>
+      <button type="submit" class="btn btn-outline-success"> Kirim </button> 
+  <br>
+
 </form>
+ @endforeach
         </div>
 </body>
 </html>

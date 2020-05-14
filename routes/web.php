@@ -24,4 +24,5 @@ Route::get('/bio/hapus/{id}','PController@hapus');
 Route::get('/FormTambah','PController@FormTambah');
 Route::POST('bio/tambah','PController@tambah');
 
-Route::get('/bio/FormEdit/{id}','PController@FormEdit')
+Route::get('/bio/FormEdit/{id}','PController@FormEdit');
+Route::POST('/bio/edit','PController@edit');    

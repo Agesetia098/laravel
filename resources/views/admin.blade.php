@@ -55,7 +55,7 @@
     <tr>
       <th scope="row">1</th>
       <td><img src="" alt="Img"></td>
-      <td>{{ $a->nama }}</td>
+      <td><a href="/bio/FormEdit/{{ $a->id_data }}">{{ $a->nama }}</a></td>
       <td>{{ $a->biodata }}</td>
       <td><a href="/bio/hapus/{{ $a->id_data }}" class="btn btn-outline-danger"> Hapus </a></td>
     </tr>
